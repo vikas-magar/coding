@@ -1,2 +1,6 @@
 # coding_interview
-Coding language practice in RUST.
+--
+Learning Rust with Coding questions practice
+
+* smallest difference
+* Move Element to End
