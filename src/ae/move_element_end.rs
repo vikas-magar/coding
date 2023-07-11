@@ -1,3 +1,5 @@
+use std::vec;
+
 pub fn run() {
     println!("AE | Move Target Element to End of the List");
     let mut v = vec![2, 1, 2, 2, 2, 3, 4, 2];
@@ -22,4 +24,14 @@ fn move_element_end(v: &mut Vec<i32>, t: i32) {
         }
         start += 1;
     }
+}
+
+#[test]
+fn validate() {
+    let mut v = vec![2, 1, 2, 2, 2, 3, 4, 2];
+    let te: i32 = 2;
+    let opt = vec![4, 1, 3, 2, 2, 2, 2, 2];
+    move_element_end(&mut v, te);
+    let out = v.iter().zip(&opt).filter(|&(a, b)| a == b).count();
+    assert_eq!(v.len(), out);
 }
