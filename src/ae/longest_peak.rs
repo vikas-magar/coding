@@ -38,10 +38,16 @@ fn peak(a: &[i32]) -> i32 {
         kk = *k + 1;
         left = a[kk];
         right = **v;
-
+        println!("{:?}", a);
         while left < right && kk <= end {
+            println!("left : {}", left);
+            println!("right: {}", right);
+            println!("kk: {}", kk);
             cnt += 1;
             kk = kk + 1;
+            if kk > end {
+                break;
+            }
             right = left;
             left = a[kk];
         }
@@ -61,6 +67,12 @@ fn validate() {
 fn validate2() {
     let a: [i32; 7] = [2, 1, 4, 7, 3, 2, 5];
     assert_eq!(5, peak(&a));
+}
+
+#[test]
+fn validate3() {
+    let a: [i32; 11] = [0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0];
+    assert_eq!(11, peak(&a));
 }
 
 pub fn run() {
