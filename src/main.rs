@@ -1,5 +1,6 @@
 mod ae;
 
+use ae::array_of_product;
 use ae::longest_peak;
 use ae::monotonic_array;
 use ae::move_element_end;
@@ -12,4 +13,5 @@ fn main() {
     move_element_end::run();
     monotonic_array::run();
     longest_peak::run();
+    array_of_product::run();
 }
