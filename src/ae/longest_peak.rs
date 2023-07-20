@@ -19,8 +19,8 @@ fn peak(a: &[i32]) -> i32 {
     for (k, v) in store.iter() {
         let mut kk;
         let mut cnt = 1;
-        let mut left = 0;
-        let mut right = 0;
+        let mut left;
+        let mut right;
         //down
         kk = *k - 1;
         left = a[kk];
