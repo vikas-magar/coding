@@ -33,3 +33,10 @@ pub fn run() {
     let input = vec![5, 1, 4, 2];
     array_of_product(input);
 }
+
+#[test]
+fn validate() {
+    let out = vec![8, 40, 10, 20];
+    let input = vec![5, 1, 4, 2];
+    assert_eq!(out, array_of_product(input));
+}
