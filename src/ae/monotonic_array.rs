@@ -1,22 +1,5 @@
 use std::vec;
 
-/* Monotonic array time: O(n) | space: O(1) */
-fn monotonic_array(v: Vec<i32>) -> bool {
-    let mut is_incremental: bool = false;
-
-    let end = v.len();
-    let mut start: usize = 0;
-    for _item in v.iter() {
-        if *_item < v[start + 1] && start < end {
-            is_incremental = true
-        }
-        if !is_incremental {
-            break;
-        }
-        start += 1;
-    }
-    return !is_incremental;
-}
 /* Monotonic Array, Time: O(n) | Space: O(1)*/
 fn is_monotonic(v: &Vec<i32>) -> bool {
     use std::cmp::Ordering;

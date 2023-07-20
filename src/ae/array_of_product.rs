@@ -1,5 +1,6 @@
 use std::i32;
 
+/* Time : O(n) | Space: O(n) */
 fn array_of_product(nums: Vec<i32>) -> Vec<i32> {
     let mut left = vec![1; nums.len()];
     let mut right = vec![1; nums.len()];
