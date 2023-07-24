@@ -4,6 +4,7 @@ use std::vec;
 fn is_monotonic(v: &Vec<i32>) -> bool {
     use std::cmp::Ordering;
     let mut d = 0;
+    /*Check the orderring of the array*/
     for (a, b) in v.iter().zip(v[1..].iter()) {
         d |= match a.cmp(b) {
             Ordering::Equal => 0,
@@ -17,14 +18,14 @@ fn is_monotonic(v: &Vec<i32>) -> bool {
     return true;
 }
 
-pub fn run() {
+#[test]
+fn validate() {
     let v = vec![-1, -5, -10, -1100, -1100, -1101, -1102, -9001];
     let expected = true;
     assert_eq!(expected, is_monotonic(&v));
 }
 
-#[test]
-fn validate() {
+pub fn run() {
     let v = vec![-1, -5, -10, -1100, -1100, -1101, -1102, -9001];
     let expected = true;
     assert_eq!(expected, is_monotonic(&v));

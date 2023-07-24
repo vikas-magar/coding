@@ -28,3 +28,9 @@ fn validate() {
     //let input = vec![8, -8];
     assert_eq!(vec![5, 10], asteroid_collision(input));
 }
+
+#[test]
+fn validate2() {
+    let input = vec![1, 5, -1];
+    assert_eq!(vec![1, 2, 3], asteroid_collision(input))
+}

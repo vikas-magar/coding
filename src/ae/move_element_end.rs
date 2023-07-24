@@ -1,7 +1,7 @@
 use std::vec;
 
 pub fn run() {
-    println!("AE | Move Target Element to End of the List");
+    println!("LC | Move Target Element to End of the List");
     let mut v = vec![2, 1, 2, 2, 2, 3, 4, 2];
     let te: i32 = 2;
     move_element_end(&mut v, te);
