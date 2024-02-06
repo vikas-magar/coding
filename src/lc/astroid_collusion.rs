@@ -23,6 +23,7 @@ pub fn run() {
     asteroid_collision(input);
 }
 #[test]
+
 fn validate() {
     let input = vec![5, 10, -5];
     //let input = vec![8, -8];
