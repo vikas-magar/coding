@@ -1,3 +1,4 @@
+// Time: O(n) | Space : O(n)
 pub fn run(input: &Vec<Vec<i32>>) -> Vec<&i32> {
     let height = input.len() - 1;
     let width = input[0].len() - 1;
@@ -37,7 +38,7 @@ pub fn run(input: &Vec<Vec<i32>>) -> Vec<&i32> {
     result
 }
 fn is_out_of_bound(row: &usize, col: &usize, height: &usize, width: &usize) -> bool {
-    *row < 0 || *row > *height || *col < 0 || *col > *width
+    *row > *height || *col > *width
 }
 
 #[cfg(test)]
