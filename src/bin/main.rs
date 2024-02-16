@@ -21,6 +21,7 @@ fn main() {
 
     first_duplicate_value::run();
     astroid_collusion::run();
+    println!("Welcome to Print");
     println!(
         "{}",
         array::longest_range::run(vec![0, 3, 7, 2, 5, 8, 4, 6, 0, 1])
