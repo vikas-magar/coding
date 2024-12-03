@@ -1,5 +1,3 @@
-
-
 fn main() {
-    println!("Started the Journy with LL")
+    println!("Started the Journy with LL");
 }
