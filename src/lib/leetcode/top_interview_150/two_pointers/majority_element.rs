@@ -38,7 +38,7 @@ mod tests {
 
     #[test]
     fn test_one() {
-        let mut nums = vec![0, 1, 2, 2, 3, 2, 2, 2];
+        let mut nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
         assert_eq!(Solution::majority_element(nums), 2);
         let mut nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
         assert_eq!(Solution::major_ele_by_boyer_moore(nums), 2);
