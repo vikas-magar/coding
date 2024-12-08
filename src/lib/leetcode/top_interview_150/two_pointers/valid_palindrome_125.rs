@@ -17,6 +17,13 @@ impl Solution {
 
         fs.partial_cmp(bw) == Some(std::cmp::Ordering::Equal)
     }
+    fn is_palindrome1(s: String) -> bool {
+        let st: Vec<_> = s
+            .chars()
+            .filter_map(|c| c.is_alphanumeric().then(|| c.to_ascii_lowercase()))
+            .collect();
+        st.iter().eq(st.iter().rev())
+    }
 }
 
 #[cfg(test)]
@@ -26,5 +33,6 @@ mod tests {
     #[test]
     fn test_is_palindrome() {
         Solution::is_palindrome("A man, a plan, a canal: Panama".to_string());
+        Solution::is_palindrome1("A man, a plan, a canal: Panama".to_string());
     }
 }
