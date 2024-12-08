@@ -1,6 +1,5 @@
-use core::num;
+use crate::Solution;
 use std::collections::HashMap;
-struct Solution;
 
 impl Solution {
     pub fn majority_element(nums: Vec<i32>) -> i32 {
@@ -10,9 +9,9 @@ impl Solution {
             *counter += 1;
         }
 
-        let (max_key, max_count) = store.iter().max_by_key(|&(_, count)| count).unwrap();
+        let (max_key, _) = store.iter().max_by_key(|&(_, count)| count).unwrap();
 
-        *max_key as i32
+        *max_key
     }
 
     pub fn major_ele_by_boyer_moore(nums: Vec<i32>) -> i32 {
@@ -38,9 +37,9 @@ mod tests {
 
     #[test]
     fn test_one() {
-        let mut nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
+        let nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
         assert_eq!(Solution::majority_element(nums), 2);
-        let mut nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
+        let nums = vec![1, 1, 2, 2, 3, 2, 2, 2];
         assert_eq!(Solution::major_ele_by_boyer_moore(nums), 2);
     }
 }
