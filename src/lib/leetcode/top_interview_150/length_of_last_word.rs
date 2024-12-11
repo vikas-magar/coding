@@ -14,11 +14,9 @@ impl Solution {
                     }
                 }
             }
-            None => {
-                count;
-            }
+            None => {}
         }
-        count as i32
+        count
     }
 
     pub fn length_of_last_word(s: String) -> i32 {
