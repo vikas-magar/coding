@@ -1,9 +1,4 @@
 pub mod leetcode;
+pub mod template;
 
 pub struct Solution;
-
-impl Solution {
-    pub fn hello_print() {
-        println!("Hello from leetcode!");
-    }
-}
