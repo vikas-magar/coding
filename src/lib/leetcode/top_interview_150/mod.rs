@@ -1,3 +1,4 @@
+pub mod first_occurance;
 pub mod length_of_last_word;
 pub mod majority_element;
 pub mod merge_sorted_array;

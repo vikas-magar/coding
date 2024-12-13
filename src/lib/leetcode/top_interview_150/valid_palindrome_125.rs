@@ -19,4 +19,8 @@ mod tests {
     fn test_one() {
         assert_eq!(Solution::is_palindrome("race a car".to_string()), false);
     }
+    #[test]
+    fn test_two() {
+        println!("welcome to indai");
+    }
 }
