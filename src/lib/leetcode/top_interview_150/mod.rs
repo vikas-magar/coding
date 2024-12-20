@@ -1,5 +1,6 @@
 pub mod first_occurance;
 pub mod length_of_last_word;
+pub mod longst_common_prefix;
 pub mod majority_element;
 pub mod merge_sorted_array;
 pub mod remove_duplicate_from_sorted_arry;

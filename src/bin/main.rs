@@ -1,13 +1,8 @@
 use coding_lib::Solution;
 
 fn main() {
-    Solution::roman_to_int("II".to_string());
-
-    let s = "world";
-    let x = 2;
-    let b = true;
-    println!("Hello, {} {} {}!", s, x, b);
-    println!("hello world");
-    println!("welcome");
-    println!("welcome")
+    let mut lc = vec![0; 5];
+    println!("len {} capacity {}", lc.len(), lc.capacity());
+    lc.push(3);
+    println!("len {} capacity {}", lc.len(), lc.capacity());
 }
