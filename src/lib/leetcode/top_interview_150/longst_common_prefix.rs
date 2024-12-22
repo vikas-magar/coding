@@ -17,6 +17,18 @@ impl Solution {
         }
         return prefix;
     }
+
+    pub fn longest_common_prefix_sol1(strs: Vec<String>) -> String {
+        strs.into_iter()
+            .reduce(|acc, e| {
+                acc.chars()
+                    .zip(e.chars())
+                    .take_while(|(a, b)| a == b)
+                    .map(|(c, _)| c)
+                    .collect()
+            })
+            .unwrap_or_default()
+    }
 }
 
 #[cfg(test)]
@@ -24,10 +36,14 @@ mod tests {
     use crate::Solution;
     #[test]
     fn test_function() {
-        let inp = vec!["flower", "flow", "flight"]
+        let inp: Vec<String> = vec!["flower", "flow", "flight"]
             .iter()
             .map(|x| x.to_string())
             .collect();
-        assert_eq!(Solution::longest_common_prefix(inp), "fl".to_string());
+        assert_eq!(
+            Solution::longest_common_prefix(inp.clone()),
+            "fl".to_string()
+        );
+        assert_eq!(Solution::longest_common_prefix_sol1(inp), "fl".to_string());
     }
 }

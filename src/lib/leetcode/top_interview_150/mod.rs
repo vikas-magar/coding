@@ -1,4 +1,5 @@
 pub mod first_occurance;
+pub mod is_subsequence;
 pub mod length_of_last_word;
 pub mod longst_common_prefix;
 pub mod majority_element;
