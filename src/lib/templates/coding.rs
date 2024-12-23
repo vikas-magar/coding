@@ -1,19 +1,10 @@
 use crate::Solution;
 
-impl Solution {
-    pub fn function(s: String) -> String {
-        return s;
-    }
-}
+impl Solution {}
 
 #[cfg(test)]
 mod tests {
     use crate::Solution;
     #[test]
-    fn test_function() {
-        assert_eq!(
-            Solution::function("Hello World".to_string()),
-            "Hello World".to_string()
-        );
-    }
+    fn test_function() {}
 }
