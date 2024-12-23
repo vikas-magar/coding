@@ -1,4 +1,4 @@
 pub mod leetcode;
-pub mod template;
+pub mod templates;
 
 pub struct Solution;
