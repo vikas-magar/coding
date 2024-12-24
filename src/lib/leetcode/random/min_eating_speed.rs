@@ -5,7 +5,7 @@ impl Solution {
         let (mut left, mut right) = (1, piles.iter().max().unwrap().clone());
         while left < right {
             let mid = left + (right - left) / 2;
-            if how_many(&piles, mid, h) {
+            if can_be_finished(&piles, mid, h) {
                 right = mid;
             } else {
                 left = mid + 1;
@@ -21,6 +21,14 @@ fn how_many(piles: &[i32], mid: i32, h: i32) -> bool {
         total_hours += (pile + mid - 1) / mid;
     }
     total_hours <= h
+}
+
+// with fold
+fn can_be_finished(piles: &[i32], mid: i32, h: i32) -> bool {
+    let total_hrs = piles
+        .iter()
+        .fold(0, |acc, &pile| acc + (pile + mid - 1) / mid);
+    total_hrs <= h
 }
 
 #[cfg(test)]
