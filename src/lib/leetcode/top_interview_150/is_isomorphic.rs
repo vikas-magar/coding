@@ -12,7 +12,7 @@ impl Solution {
                 return false;
             }
         }
-        map.values().collect::<HashSet<_>>().len() == map.keys().collect::<HashSet<_>>().len()
+        store.values().collect::<HashSet<_>>().len() == store.keys().collect::<HashSet<_>>().len()
     }
 }
 
