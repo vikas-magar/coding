@@ -1,6 +1,8 @@
+use coding_lib::Solution;
+
 fn main() {
-    let mut lc = vec![0; 5];
-    println!("len {} capacity {}", lc.len(), lc.capacity());
-    lc.push(3);
-    println!("len {} capacity {}", lc.len(), lc.capacity());
+    let w1 = "aa".to_string();
+    let w2 = "aab".to_string();
+
+    Solution::can_construct(w1, w2);
 }

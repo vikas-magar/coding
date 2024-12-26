@@ -1,4 +1,6 @@
+pub mod can_construct;
 pub mod first_occurance;
+pub mod is_happy;
 pub mod is_isomorphic;
 pub mod is_subsequence;
 pub mod length_of_last_word;
