@@ -13,7 +13,7 @@ impl Solution {
 }
 
 fn process_num(n: i32) -> i32 {
-    let mut nn = n.clone();
+    let nn = n.clone();
     nn.to_string()
         .chars()
         .filter_map(|c| c.to_digit(10))

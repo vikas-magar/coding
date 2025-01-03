@@ -15,6 +15,7 @@ impl Solution {
     }
 }
 
+#[allow(dead_code)]
 fn how_many(piles: &[i32], mid: i32, h: i32) -> bool {
     let mut total_hours = 0;
     for &pile in piles {

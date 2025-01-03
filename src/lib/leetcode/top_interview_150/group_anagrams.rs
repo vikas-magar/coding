@@ -6,7 +6,7 @@ impl Solution {
     pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
         let mut store: HashMap<String, Vec<String>> = HashMap::new();
         for ele in strs.iter() {
-            let mut l = sort_string(&ele);
+            let l = sort_string(&ele);
             store
                 .entry(l)
                 .and_modify(|e| e.push(ele.clone()))
@@ -24,6 +24,6 @@ fn sort_string(input: &str) -> String {
 mod tests {
     #[test]
     fn test_function() {
-        let inp = vec!["eat", "tea", "tan", "ate", "nat", "bat"];
+        let _inp = vec!["eat", "tea", "tan", "ate", "nat", "bat"];
     }
 }
