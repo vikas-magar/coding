@@ -1,5 +1,8 @@
 pub mod can_construct;
+pub mod contains_nearby_duplicate;
 pub mod first_occurance;
+pub mod group_anagrams;
+pub mod is_anagram;
 pub mod is_happy;
 pub mod is_isomorphic;
 pub mod is_subsequence;
